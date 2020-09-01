@@ -1,0 +1,1067 @@
+/*** Fonts ****/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/*** Reset Code ******/
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+	  color:#444;
+}
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+button:focus,input:focus,textarea:focus{
+	outline:0;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+img{
+  width:100%;
+}
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Roboto', sans-serif;
+	font-weight:400;
+	color:#313131;
+	margin-top:0px;
+	font-style:normal;
+	text-transform:normal;
+}
+.clearfix{
+	position: relative;
+}
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+ul,li{
+  list-style: none;
+  margin:0;
+  padding: 0;
+  font-size: 0;
+}
+li{
+  font-size: 17px;
+}
+a{
+  text-decoration: none;
+  color: #000;
+  font-size:14px ;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*** Header *****/
+#scrollToTop {
+	background-color: #e62739;
+	color: #fff;
+	border: none;
+	outline: 0;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.25);
+	box-shadow: 0 0 10px rgba(0,0,0,.25);
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 99;
+}
+#header{}
+.header-area{}
+.header-top {
+	background: #4caf50;
+	min-height: 30px;
+	width: 100%;
+}
+.header-middle {
+	overflow: hidden;
+}
+.header-inner {
+	overflow: hidden;
+	position: relative;
+}
+.header-search {
+	width: 33.33%;
+	float: left;
+}
+.search-inner {
+	/* position: relative; */
+}
+.search-inner form {
+	width: 250px;
+	height: 40px;
+	position: relative;
+	background: #ddd;
+	margin-top: 40px;
+}
+.search-inner form input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	font-weight: 700;
+	border: 1px solid #ddd;
+	background: #ddd;
+	padding-left: 45px;
+}
+.fa.fa-search {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: rgb(232, 55, 55);
+	
+	color: #fff;
+}
+.header-logo {
+	width: 33.33%;
+	float: left;
+	margin-top: 30px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.header-logo a {
+	display: inline-block;
+}
+.header-logo a img {
+	display: block;
+}
+.header-icon {
+	width: 33.33%;
+	float: left;
+	text-align: right;
+	margin-top: 40px;
+}
+.header-icon li {
+	display: inline-block;
+	margin-right: 10px;
+}
+.header-icon li:last-child{
+	margin-right: 0;
+}
+.header-icon li a {
+	display: block;
+	font-size: 17px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #000;
+	background: #ddd;
+}
+.header-icon li a:hover{}
+/**** Nav  ***/
+.nav-sticky{	
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index:99;
+}
+.main-nav {
+	background: #4caf50;
+}
+.main-menu{
+  text-align: center;
+  
+}
+.main-menu ul{}
+.main-menu ul li{
+  display: inline-block;
+}
+.main-menu ul li a {
+  text-transform: uppercase;
+	display: block;
+	padding: 20px 30px;
+	transition: .3s;
+	font-weight: 700;
+	font-size: 14px;
+}
+.main-menu ul li a span {
+	color: #fff;
+	font-weight: 600;
+} 
+.main-menu ul li a:hover{
+    color: #fff;
+    background-color: rgb(232, 55, 55);
+}
+/**** pdf Area ***/
+.pdf-area{
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.pdf-wrap{
+  overflow: hidden;
+}
+.book {
+  width:68%;
+  margin-right: 2%;
+  float: left;
+  overflow: hidden;
+}
+.pdf-item {
+	display: block;
+	width: 18%;
+	height: 130px;
+	text-align: center;
+	overflow: hidden;
+	background: #4caf50;
+	color: #fff;
+	border-radius: 50px 50px 5px 5px;
+	margin-left: 2%;
+	margin-bottom: 20px;
+	float: left;
+	transition: .3s;
+}
+.pdf-item:hover{
+  background: rgb(232, 55, 55);
+}
+.pdf-thumb {
+	margin-top: 15px;
+}
+.pdf-thumb img {
+	display: block;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: auto;
+}
+.pdf-text {
+	margin-top: 10px;
+}
+.pdf-text p {
+	font-size: 17px;
+	text-transform: uppercase;
+}
+.ads {
+	width: 30%;
+	float: left;
+	border: 1px solid rgb(232, 55, 55);
+}
+.ads-active{}
+.ads-item {
+  position: relative;
+  min-height: 235;
+  padding: 10px;
+}
+.ads-item span {
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: rgb(232, 55, 55);
+	color: #fff;
+	font-weight: 600;
+}
+.ads-item img {
+	display: block;
+  width: 100%;
+  min-height: 235px;
+	/* min-height: 235px;
+	max-height: 280px; */
+}
+.ads-nav-style.owl-carousel .owl-nav button {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #fff;
+	color: rgb(232, 55, 55);
+	width: 40px;
+	height: 40px;
+  font-size: 21px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.ads-nav-style .owl-nav button.owl-next{
+  right: 0;
+  left: auto;
+}
+.ads-active:hover .owl-nav button{
+  opacity: 1;
+  visibility: visible;
+}
+.ads-nav-style.owl-carousel .owl-dots {
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	transform: translateX(-50%);
+}
+.ads-nav-style.owl-carousel .owl-dots button {
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	margin-right: 5px;
+	border-radius: 50%;
+}
+.ads-nav-style.owl-carousel .owl-dots button.active{
+  background: rgb(232, 55, 55);
+}
+.ads-nav-style.owl-carousel .owl-dots button:last-child{
+	margin-right: 0;
+}
+/****** Main Content *****/
+.main-content{}
+.content-wrap {
+	width: 68%;
+	float: left;
+	margin-right: 2%;
+}
+.blog-wrap{}
+.latest-blog{}
+.section-title {
+	background: #ddd;
+	margin-bottom: 30px;
+	position: relative;
+}
+.section-title::before,
+.section-title::after
+{
+	content: '';
+	position: absolute;
+	background: rgb(232, 55, 55);
+	width: 5px;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.section-title::after{
+  left: auto;
+  right: 0;
+}
+.section-title h2 {
+	background: #fff;
+	color: #000;
+	text-transform: uppercase;
+	padding: 7px 0;
+	width: 40%;
+	position: relative;
+	padding-left: 20px;
+	margin-left: 5px;
+	font-weight: 700;
+	font-size: 23px;
+}
+.latest-post-wrap{
+  margin-left: -2%;
+}
+.post{}
+.post-item{
+  margin-left: 2%;
+  width: 48%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.post-thumb {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.post-thumb a {
+	background-color: #ddd;
+	background-size: cover;
+	display: block;
+	width: 100%;
+	padding: 37% 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	color: #fff;
+}
+.post-thumb a span {
+	display: block;
+  position: absolute;
+  left: 50%;
+	top: 50%;
+	margin-left: -50px;
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.73);
+	color: #fff;
+	font-weight: 700;
+  text-align: center;
+  line-height: 100px;
+	border-radius: 50%;
+  transform: scale(0.2);
+  opacity: 0;
+  transition: .3s;
+}
+.post-thumb:hover a span{
+  opacity: 1;
+  transform: scale(1);
+}
+.post-content {
+	padding: 5px;
+}
+.post-meta{
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.post-meta li {
+	font-size: 14px;
+	display: inline-block;
+	margin-right: 10px;
+	color: rgb(232, 55, 55);
+}
+.post-meta li:last-child{
+	margin-right:0px;
+}
+.post-meta li i{
+  
+}
+.post-meta li a {
+	display: block;
+	color: rgb(232, 55, 55);
+	font-size: 14px;
+	text-transform: capitalize;
+	font-weight: 700;
+}
+.post-title {
+	margin-bottom: 10px;
+}
+.post-title h2{}
+.post-title h2 a {
+	display: block;
+	font-weight: 600;
+}
+.post-summury{}
+.post-summury p {
+	color: #000;
+	font-size: 17px;
+	text-align: justify;
+}
+.post-summury p a {
+	display: inline-block;
+	color: #f00;
+	margin-left: 5px;
+	font-weight: 700;
+}
+.page-nav {
+  overflow: hidden;
+  padding: 10px 20px;
+}
+.page-nav a {
+	display: block;
+	float: left;
+	color: #343a40;
+	border: 1px solid #343a40;
+	padding: 10px 20px;
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.page-nav a.next {
+	float: right;
+}
+.page-nav a span {
+	font-size: 26px;
+}
+.page-nav a:hover{
+  background-color: #343a40;
+  color: #fff;
+}
+/*** Sidebar *****/
+.sidebar-wrap{
+  width: 30%;
+  float: left;
+}
+.sidebar{}
+.sidebar-item{
+  padding: 10px;
+  background-color: #ddd;
+  margin-bottom: 20px;
+}
+.sidebar-item:last-child{
+  margin-bottom: 0px;
+}
+.tab-wrap{
+  padding: 5px;
+}
+.tab-wrap .tab-btn {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.tab-wrap .tab-btn button {
+	border: 0;
+	background: #555;
+	display: block;
+	width: 50%;
+	height: 100%;
+	float: left;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 17px;
+	font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+.tab-wrap .tab-content{}
+.tab-content .tab-panel{
+  
+}
+.tab-panel a{
+  display: block;
+}
+.tab-panel a h4 {
+	margin-bottom: 10px;
+}
+.tab-panel a img{
+  width: 100%;
+}
+/*************/
+.sidebar-title {
+	margin-bottom: 10px;
+	border-bottom: 2px solid #e83737;
+	margin-left: -10px;
+	margin-right: -10px;
+	padding-left: 10px;
+}
+.sidebar-title h2{
+  padding-bottom: 10px;
+}
+.sidebar-title h2 a{
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.sidebar-list{}
+.sidebar-list li{
+  margin-bottom: 5px;
+}
+.sidebar-list li:last-child{
+  margin-bottom: 0px;
+}
+.sidebar-list li a{
+  display: block;
+  transition: .3s;
+}
+.sidebar-list li a:hover{
+  padding-left: 5px;
+}
+
+/***** OLder Area **/
+.older-area{
+  padding: 50px 0;
+}
+.older-active {
+	margin-top: 50px;
+}
+.older-active .pdf-item {
+	background: none;
+	width: inherit;
+}
+.older-item .pdf-thumb{
+  
+}
+.older-item .pdf-thumb img{
+  max-width: 70px;
+  height: auto;
+}
+.older-item .pdf-text{}
+.older-item .pdf-text p{
+  color: #000;
+}
+.older-area .ads,
+.older-area .ads-item,
+.older-area .ads-item img
+{
+	min-height: auto;
+}
+.ads-title{
+  padding: 5px;
+}
+/******** Footer ********/
+.footer-area{
+}
+.footer-top{
+  background-color: #343a40;
+  color: #fff;
+  padding: 50px 0;
+}
+.footer-main{
+	margin-left: -2%;
+	overflow: hidden;
+}
+.footer-left,
+.footer-center,
+.footer-right
+{
+  width: 31.33%;
+  float: left;
+  margin-left: 2%;
+  overflow: hidden;
+}
+.footer-widget {
+	border: 1px solid #5A5A5A;
+	padding: 15px 30px;
+	padding-top: 0;
+	border-top-color: #e83737;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	/* overflow: hidden; */
+}
+.footer-widget:last-child{
+  margin-bottom: 0;
+}
+.footer-widget::before,
+.footer-widget::after
+{
+	content: '';
+	position: absolute;
+	left: -1px;
+	top: 0;
+	bottom: 40%;
+	width: 1px;
+	height: 50%;
+	background: #e83737;
+}
+.footer-widget::after{
+  left: auto;
+  right: -1px;
+}
+.footer-widget .title {
+	color: #fff;
+	background: #e83737;
+	text-align: center;
+	padding: 8px 0;
+	text-transform: capitalize;
+	font-weight: 700;
+	letter-spacing: 2px;
+	position: relative;
+	top: -20px;
+}
+.footer-widget .content {
+	margin-top: 10px;
+}
+.footer-widget .content .links {
+  background: #fff;
+	padding: 10px 20px;
+}
+.footer-widget .content .links a {
+	display: block;
+	color: rgb(255, 255, 255) !important;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	font-size: 20px;
+	font-weight: 700;
+	padding: 20px 15px;
+	text-align: center;
+	text-transform: capitalize;
+	box-shadow: rgba(0, 0, 0, 0.25) 1px 1px 10px;
+	margin-bottom: 20px;
+}
+.footer-widget .content .links a:last-child{
+  margin-bottom: 0;
+}
+.footer-widget .content .links a.donate,
+.footer-widget .content .links a.contact
+{
+	background: rgb(16, 172, 132);
+}
+.footer-widget .content .links a.join,
+.footer-widget .content .links a.invite
+{
+  background: rgb(238, 82, 83);
+}
+.footer-widget .content .links a.team{
+  background:rgb(183, 21, 64);
+}
+.footer-widget .newsletter{}
+.footer-widget .newsletter p{}
+.footer-widget .newsletter .email {
+	width: 100%;
+	height: 40px;
+	position: relative;
+	margin-top: 15px;
+}
+.footer-widget .newsletter input {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding-left: 5px;
+	padding-right: 50px;
+}
+.footer-widget .newsletter .email::after {
+	content: "\f1d8";
+	position: absolute;
+	width: 50px;
+	height: 40px;
+	background: #e83737;
+	top: 0;
+	right: 0;
+	font-family: 'Font Awesome 5 free';
+	text-align: center;
+	line-height: 40px;
+	font-size: 17px;
+}
+.footer-widget .newsletter .email i{
+  color: #000;
+}
+/*********/
+.about-group .footer-logo {
+	text-align: center;
+	margin-bottom: 15px;
+}
+.about-group .footer-logo a{
+	display: inline-block;
+}
+.about-group .footer-logo a img {
+	display: block;
+}
+.about-group p {
+	font-size: 17px;
+	font-weight: 700;
+	text-align: center;
+}
+/*******/
+  .about-author {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+	color: #fff;
+	max-width: 300px;
+	margin: auto;
+}
+.author-thumb{}
+.author-thumb img{
+	width: 75%;
+}
+.author-title {
+	margin-top: 20px;
+}
+.author-title h2 {
+	color: #A1A1A1;
+	font-size: 36px;
+	font-weight: 700;
+}
+.author-title h3 {
+	color: #fff;
+	font-size: 24px;
+	margin-top: 15px;
+}
+.about-author a.contact-btn {
+	display: block;
+	background: #048404;
+	color: #fff;
+	padding: 15px;
+	font-size: 30px;
+	margin-top: 20px;
+	transition: .3s;
+}
+.about-author a.contact-btn:hover{
+	background: #e83737;
+}
+.social-media{
+	text-align: center;
+}
+.social-media .icon{
+	margin-bottom: 10px;
+}
+.social-media .icon a {
+	display: inline-block;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #e83737;
+	font-size: 23px;
+	margin-right: 10px;
+	transition: .3s;
+}
+.social-media .icon a:last-child{
+	margin-right: 0;
+}
+.social-media .icon a:hover{
+	background: #048404;
+}
+.social-media .app{}
+.social-media .app a {
+	display: block;
+}
+.social-media .app a img{}
+.copyright{
+	background:rgba(0,0,0,0.9);
+}
+.copy-inner{
+	text-align: center;
+	padding:20px 0
+}
+.copy-inner p,
+.copy-inner p a
+{
+	color: #fff;
+	font-size: 17px;
+}
+.copy-inner p a{
+	display: inline-block;
+	color: #e83737;
+	margin-left: 10px;
+	letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
